@@ -1,38 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UP Medical Counselling - MBBS</title>
+    <title>UP Medical Counselling 2025</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
+
+    <!-- Header Section -->
     <header>
-        <h1>Uttar Pradesh Medical Counselling 2025</h1>
+        <div class="logo">
+            <img src="logo.png" alt="NEET Support Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Colleges</a></li>
+                <li><a href="#">Counselling</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
     </header>
 
-    <section class="info">
-        <h2>About UP MBBS Counselling</h2>
-        <p>Get the latest updates on Uttar Pradesh medical counselling for MBBS admissions. Register now to secure your seat.</p>
+    <!-- Main Banner -->
+    <section class="hero">
+        <img src="download.jfif" alt="UP NEET Counselling Banner">
+        <h1>Uttar Pradesh Medical Counselling 2025</h1>
+        <p>Get the latest updates and register for MBBS counselling.</p>
     </section>
 
+<!-- Steps Section -->
+<section class="steps">
+    <div class="step">
+        <!-- Image for Icon 1 -->
+        <div class="icon"><img src="assets/registration.png" alt="Registration Icon"></div>
+        <p>REGISTRATION FOR STATE MERIT</p>
+    </div>
+    <div class="step">
+        <!-- Image for Icon 2 -->
+        <div class="icon"><img src="assets/fee.png" alt="Fee Payment Icon"></div>
+        <p>PAY REGISTRATION FEE</p>
+    </div>
+    <div class="step">
+        <!-- Image for Icon 3 -->
+        <div class="icon"><img src="assets/security.png" alt="Security Payment Icon"></div>
+        <p>PAY SECURITY MONEY</p>
+    </div>
+    <div class="step">
+        <!-- Image for Icon 4 -->
+        <div class="icon"><img src="assets/choice.png" alt="Choice Filling Icon"></div>
+        <p>CHOICE FILLING & LOCKING</p>
+    </div>
+    <div class="step">
+        <!-- Image for Icon 5 -->
+        <div class="icon"><img src="assets/result.png" alt="Result Icon"></div>
+        <p>RESULT</p>
+    </div>
+</section>
+
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="content">
+            <!-- Govt. Order Section -->
+            <section class="govt-order">
+                <h2>Govt. Order</h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <ul class="govt-order-list">
+                            <li><a href="files/fee_go_03_non_minority.pdf">UP NEET UG & PG 2024 FEE G.O. FOR 03 NON
+                                    MINORITY PRIVATE MEDICAL COLLEGE</a></li>
+                            <li><a href="files/ug_2024_brochure.pdf">REGARDING UP NEET UG 2024 BROCHURE</a></li>
+                            <li><a href="files/ug_2024_policy_go.pdf">REGARDING UP NEET UG 2024 POLICY GO</a></li>
+                            <li><a href="files/fee_go_non_minority_medical_dental.pdf">UP NEET UG & PG 2024 NON MINORITY
+                                    PRIVATE MEDICAL & DENTAL COLLEGE FEE GO</a></li>
+                            <li><a href="files/pg_2024_policy_go.pdf">REGARDING UP NEET PG 2024 POLICY GO</a></li>
+                            <li><a href="files/pg_2024_brochure.pdf">REGARDING UP NEET PG 2024 BROCHURE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="view-more"><a href="#">View More</a></div>
+            </section>
+
+            <!-- Notification Section -->
+            <section class="notification">
+                <h2>Notification</h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <ul class="notification-list">
+                            <li><a href="files/third_round_counseling_upneet_2024.pdf">TENTATIVE SEAT MATRIX OF THIRD
+                                    ROUND COUNSELING UP NEET PG-2024 (MD MS DIPLOMA) (UPLOADED ON DATED 27-01-2025)</a>
+                            </li>
+                            <li><a href="files/third_round_counseling_dnb_2024.pdf">TENTATIVE SEAT MATRIX OF THIRD ROUND
+                                    COUNSELING DNB-2024 (UPLOADED ON DATED 27-01-2025)</a></li>
+                            <li><a href="files/revised_fee_ts_mishra_medical_college.pdf">REVISED FEE STRUCTURE OF T.S.
+                                    MISHRA MEDICAL COLLEGE & HOSPITAL, LUCKNOW UP NEET PG-2024</a></li>
+                            <li><a href="files/state_merit_list_upneet_pg_2024.pdf">UP STATE MERIT LIST OF UPNEET PG
+                                    (MD/MS/DIPLOMA) MEDICAL 2024 ROUND-3 AND ONWARD (UPLOADED ON DATED 24-01-2025)</a>
+                            </li>
+                            <li><a href="files/state_merit_list_upneet_dnb.pdf">UP STATE MERIT LIST OF UPNEET PG (DNB)
+                                    MEDICAL 2024 ROUND-3 AND ONWARD (UPLOADED ON DATED 24-01-2025)</a></li>
+                            <li><a href="files/revised_fee_hind_institute_medical.pdf">REVISED FEE STRUCTURE OF HIND
+                                    INSTITUTE OF MEDICAL</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="view-more"><a href="#">View More</a></div>
+            </section>
+        </section>
+    </main>
+
+
+
+    <!-- Registration Section -->
     <section class="registration">
         <h2>Register for Counselling</h2>
         <form id="registrationForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" required>
-
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
             <button type="submit">Submit</button>
         </form>
         <p id="message"></p>
     </section>
 
-    <script src="js/script.js"></script>
+    <!-- Footer Section -->
+    <footer>
+        <div class="newsletter">
+            <h3>Get Updates!</h3>
+            <p>Subscribe to our newsletter for the latest updates.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter Email">
+                <button>Sign Up</button>
+            </div>
+        </div>
+        <div class="contact">
+            <h3>Address</h3>
+            <p>XYZ Co-working Space</p>
+            <p>Email: support@neetsupport.com</p>
+            <p>Phone: +91 9876543210</p>
+        </div>
+        <div class="social">
+            <h3>Follow Us</h3>
+            <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider");
+            function startAutoScroll() {
+                let scrollStep = 1;
+                function autoScroll() {
+                    if (slider.scrollTop + slider.clientHeight >= slider.scrollHeight) {
+                        slider.scrollTop = 0;
+                    } else {
+                        slider.scrollTop += scrollStep;
+                    }
+                }
+                setInterval(autoScroll, 100);
+            }
+            startAutoScroll();
+        });
+    </script>
+
 </body>
+
 </html>
