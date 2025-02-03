@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #005F59;
+    color: white;
+    padding: 20px;
+}
+
+.info, .registration {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 8px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    background: #FF9245;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
