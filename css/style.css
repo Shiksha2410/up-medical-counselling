@@ -1,32 +1,47 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
+/* Header */
 header {
-    background: #005F59;
-    color: white;
-    padding: 20px;
-}
-
-.info, .registration {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-
-form {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #005F59;
+    color: white;
 }
 
-input {
-    padding: 8px;
-    width: 80%;
-    margin: 0 auto;
+.logo {
+    display: flex;
+    align-items: center;
+    width: 120px;
+}
+
+.logo img {
+    height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.actions input {
+    padding: 5px;
+    border-radius: 5px;
 }
 
 button {
@@ -35,4 +50,291 @@ button {
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: black;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: black;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Flexbox layout for Govt. Order and Notification */
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.content > section {
+    flex: 0 0 48%; /* Each section takes up 48% of the available width */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content > section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Govt. Order and Notification Section (Automatic Scroll) */
+.slider-container {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    animation: scrollNews 15s linear infinite;
+}
+
+.govt-order-list, .notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.govt-order-list li, .notification-list li {
+    padding: 8px 0;
+}
+
+.govt-order-list li a, .notification-list li a {
+    text-decoration: none;
+    color: #005F59;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.govt-order-list li a:hover, .notification-list li a:hover {
+    color: #FF9245;
+}
+
+@keyframes scrollNews {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+/* View More Styling */
+.view-more {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.view-more a {
+    font-weight: bold;
+    color: #005F59;
+    text-decoration: none;
+}
+
+.view-more a:hover {
+    color: #FF9245;
+}
+
+/* Registration Section */
+.registration {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration h2 {
+    margin-bottom: 15px;
+    color: #005F59;
+}
+
+.registration form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.registration input {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.registration button {
+    background: #FF9245;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 90%;
+    max-width: 180px;
+    transition: background 0.3s ease-in-out;
+}
+
+.registration button:hover {
+    background: #e07830;
+}
+
+/* Footer Section */
+footer {
+    background: #005F59;
+    color: white;
+    text-align: center;
+    padding: 12px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.newsletter, .contact, .social {
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 10px;
+}
+
+.newsletter h3, .contact h3, .social h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.newsletter input {
+    padding: 6px;
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 6px;
+}
+
+.newsletter button {
+    background: #FF9245;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.social p {
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social p a:hover {
+    text-decoration: underline;
+}
+
+/* Steps Section */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.step {
+    text-align: center;
+    background-color: #FF9245;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.step:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+.step .icon {
+    background-color: #fff;
+    color: #FF9245;
+    width: 80px; /* Fixed size for the icon container */
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2em; /* Ensure the icon scales nicely */
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.step .icon img {
+    width: 50px; /* Set a fixed width for the icon image */
+    height: 50px; /* Set a fixed height for the icon image */
+    object-fit: contain;
+}
+
+.step:hover .icon {
+    background-color: #005F59;
+    transform: rotate(360deg);
+}
+
+.step p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.step:hover p {
+    color: #FF9245;
 }
