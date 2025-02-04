@@ -91,20 +91,44 @@ main {
     justify-content: space-between;
     gap: 20px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .content > section {
-    flex: 0 0 48%; /* Each section takes up 48% of the available width */
+    flex: 1;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+    box-sizing: border-box;
 }
 
 .content > section:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.content h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #005F59;
+}
+
+.content .view-more {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content .view-more a {
+    font-weight: bold;
+    color: #005F59;
+    text-decoration: none;
+}
+
+.content .view-more a:hover {
+    color: #FF9245;
 }
 
 /* Govt. Order and Notification Section (Automatic Scroll) */
@@ -174,16 +198,28 @@ main {
     padding: 30px;
     background: white;
     margin: 20px auto;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Registration Header */
 .registration h2 {
     margin-bottom: 15px;
     color: #005F59;
 }
 
+/* Form Steps */
+.form-step {
+    display: none;
+    text-align: left;
+}
+
+.form-step.active {
+    display: block;
+}
+
+/* Input Fields */
 .registration form {
     display: flex;
     flex-direction: column;
@@ -191,7 +227,8 @@ main {
     gap: 12px;
 }
 
-.registration input {
+.registration input, 
+.registration select {
     width: 90%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -199,6 +236,13 @@ main {
     font-size: 1em;
 }
 
+/* File Upload Inputs */
+.registration input[type="file"] {
+    padding: 8px;
+    background: #f9f9f9;
+}
+
+/* Buttons */
 .registration button {
     background: #FF9245;
     color: white;
@@ -207,7 +251,7 @@ main {
     cursor: pointer;
     font-size: 1em;
     width: 90%;
-    max-width: 180px;
+    max-width: 200px;
     transition: background 0.3s ease-in-out;
 }
 
@@ -215,18 +259,72 @@ main {
     background: #e07830;
 }
 
+/* Next & Previous Buttons */
+.next-btn, .prev-btn {
+    width: 45%;
+    font-weight: bold;
+}
+
+.prev-btn {
+    background: #005F59;
+}
+
+.prev-btn:hover {
+    background: #004844;
+}
+
+/* OTP Button */
+.otp-btn {
+    background: #097F78;
+}
+
+.otp-btn:hover {
+    background: #005F59;
+}
+
+/* Form Steps Progress */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.progress-bar div {
+    width: 18%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: #ddd;
+    font-weight: bold;
+}
+
+.progress-bar .active {
+    background: #FF9245;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration {
+        width: 90%;
+    }
+
+    .registration input, .registration select, .registration button {
+        width: 100%;
+    }
+}
+
 /* Footer Section */
 footer {
     background: #005F59;
     color: white;
-    text-align: center;
-    padding: 12px 8px;
+    padding: 15px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .newsletter, .contact, .social {
@@ -238,11 +336,11 @@ footer {
 
 .newsletter h3, .contact h3, .social h3 {
     font-size: 1.2em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .newsletter input {
-    padding: 6px;
+    padding: 8px;
     width: 180px;
     border: none;
     border-radius: 5px;
@@ -253,7 +351,7 @@ footer {
     background: #FF9245;
     color: white;
     border: none;
-    padding: 6px 10px;
+    padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9em;
@@ -294,6 +392,8 @@ footer {
     flex: 1;
     margin: 0 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    width: 160px;
+    height: 170px;
 }
 
 .step:hover {
@@ -305,21 +405,21 @@ footer {
 .step .icon {
     background-color: #fff;
     color: #FF9245;
-    width: 80px; /* Fixed size for the icon container */
+    width: 80px;
     height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    font-size: 2em; /* Ensure the icon scales nicely */
+    font-size: 2em;
     font-weight: bold;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .step .icon img {
-    width: 50px; /* Set a fixed width for the icon image */
-    height: 50px; /* Set a fixed height for the icon image */
+    width: 50px;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -337,4 +437,200 @@ footer {
 
 .step:hover p {
     color: #FF9245;
+}
+
+/* New Content Section */
+.content-section {
+    padding: 15px;
+    background-color: white;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content-section h2 {
+    color: #005F59;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.content-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.content-section table, .content-section th, .content-section td {
+    border: 1px solid #ccc;
+}
+
+.content-section th, .content-section td {
+    padding: 8px;
+    text-align: left;
+}
+
+.content-section th {
+    background-color: #f4f4f4;
+}
+
+.content-section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.content-section ul li {
+    margin-bottom: 8px;
+}
+
+.content-section p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Flexbox layout for Key Highlights and Important Dates */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex-container .content-section {
+    flex: 0 0 48%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.flex-container .content-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.flex-container .content-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #005F59;
+}
+
+.flex-container .content-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.flex-container .content-section table, .flex-container .content-section th, .flex-container .content-section td {
+    border: 1px solid #ccc;
+}
+
+.flex-container .content-section th, .flex-container .content-section td {
+    padding: 8px;
+    text-align: left;
+}
+
+.flex-container .content-section th {
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    .flex-container .content-section {
+        flex: 0 0 100%;
+    }
+
+    .content-section {
+        padding: 10px;
+    }
+
+    .content-section h2 {
+        font-size: 1.4em;
+    }
+
+    .content-section th, .content-section td {
+        padding: 6px;
+    }
+
+    .content-section p {
+        margin-bottom: 8px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter, .contact, .social {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .newsletter input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .steps {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .step {
+        width: 100%;
+        height: auto;
+    }
+
+    .step .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5em;
+    }
+
+    .step p {
+        font-size: 1em;
+    }
+
+    .content-section {
+        padding: 8px;
+    }
+
+    .content-section h2 {
+        font-size: 1.2em;
+    }
+
+    .content-section th, .content-section td {
+        padding: 4px;
+    }
+
+    .content-section p {
+        margin-bottom: 6px;
+    }
 }

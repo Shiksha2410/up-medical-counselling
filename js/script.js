@@ -13,45 +13,80 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(autoScroll, 11000);
 
-    // Registration Form Validation
-    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    // Multi-Step Registration Form
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    function showStep(step) {
+        document.querySelectorAll(".form-step").forEach((el) => {
+            el.classList.remove("active");
+        });
+        document.querySelector(`#step-${step}`).classList.add("active");
+
+        // Update Progress Bar
+        document.querySelectorAll(".progress-bar div").forEach((el, index) => {
+            if (index < step) {
+                el.classList.add("active");
+            } else {
+                el.classList.remove("active");
+            }
+        });
+    }
+
+    window.nextStep = function (step) {
+        if (validateStep(step)) {
+            currentStep++;
+            showStep(currentStep);
+        }
+    };
+
+    function validateStep(step) {
+        let valid = true;
+        document.querySelectorAll(`#step-${step} input, #step-${step} select`).forEach((input) => {
+            if (!input.value) {
+                input.style.border = "2px solid red";
+                valid = false;
+            } else {
+                input.style.border = "1px solid #ccc";
+            }
+        });
+
+        if (!valid) {
+            alert("Please fill all required fields before proceeding.");
+        }
+        return valid;
+    }
+
+    // OTP Verification Placeholder (Can be extended with backend API)
+    document.querySelector(".otp-btn").addEventListener("click", function () {
+        const phoneInput = document.getElementById("phone");
+        if (phoneInput.value) {
+            alert("OTP Sent to Mobile! Enter OTP to Proceed.");
+        } else {
+            alert("Please enter your mobile number to receive OTP.");
+        }
+    });
+
+    // Form Submission Validation
+    document.getElementById("registrationForm").addEventListener("submit", function (event) {
         event.preventDefault();
-        
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let phone = document.getElementById("phone").value.trim();
+
         let messageBox = document.getElementById("message");
 
-        // Email validation pattern
-        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        let phonePattern = /^[6-9]\d{9}$/; // Matches 10-digit Indian phone numbers
-
-        if (!name || !email || !phone) {
-            messageBox.textContent = "All fields are required!";
+        if (!validateStep(currentStep)) {
+            messageBox.textContent = "Please fill all fields before submitting!";
             messageBox.style.color = "red";
             return;
         }
 
-        if (!email.match(emailPattern)) {
-            messageBox.textContent = "Enter a valid email address!";
-            messageBox.style.color = "red";
-            return;
-        }
-
-        if (!phone.match(phonePattern)) {
-            messageBox.textContent = "Enter a valid 10-digit phone number!";
-            messageBox.style.color = "red";
-            return;
-        }
-
-        // Successful registration
         messageBox.textContent = "Registration successful!";
         messageBox.style.color = "green";
         document.getElementById("registrationForm").reset();
 
-        // Optional: Simulate submission (e.g., send data to backend)
         setTimeout(() => {
             messageBox.textContent = "";
         }, 3000);
     });
+
+    showStep(currentStep);
 });
