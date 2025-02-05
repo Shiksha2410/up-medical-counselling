@@ -57,16 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return valid;
     }
 
-    // OTP Verification Placeholder (Can be extended with backend API)
-    document.querySelector(".otp-btn").addEventListener("click", function () {
-        const phoneInput = document.getElementById("phone");
-        if (phoneInput.value) {
-            alert("OTP Sent to Mobile! Enter OTP to Proceed.");
-        } else {
-            alert("Please enter your mobile number to receive OTP.");
-        }
-    });
-
     // Form Submission Validation
     document.getElementById("registrationForm").addEventListener("submit", function (event) {
         event.preventDefault();
