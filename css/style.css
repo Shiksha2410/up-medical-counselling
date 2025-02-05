@@ -7,7 +7,7 @@ body {
 }
 
 /* Header */
-header {
+header.unique-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,34 +16,34 @@ header {
     color: black;
 }
 
-.logo {
+.logo.unique-logo {
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 300px;
+.logo.unique-logo img {
+    height: 80px;
     max-width: 100%;
     object-fit: contain;
 }
 
-nav ul {
+nav.unique-nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav ul li a {
+nav.unique-nav ul li a {
     color: white;
     text-decoration: none;
 }
 
-.actions input {
+.actions.unique-actions input {
     padding: 5px;
     border-radius: 5px;
 }
 
-button {
+button.unique-button {
     background: #FF9245;
     color: white;
     border: none;
@@ -53,30 +53,30 @@ button {
 }
 
 /* Hero Section */
-.hero {
+.hero.unique-hero {
     text-align: center;
     padding: 50px 20px;
     background-color: white;
 }
 
-.hero img {
+.hero.unique-hero img {
     width: 100%;
     height: auto;
 }
 
-.hero h1 {
+.hero.unique-hero h1 {
     font-size: 2.2em;
     font-weight: bold;
     color: black;
 }
 
-.hero p {
+.hero.unique-hero p {
     font-size: 1.2em;
     color: black;
 }
 
 /* Main Content */
-main {
+main.unique-main {
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -85,7 +85,7 @@ main {
 }
 
 /* Flexbox layout for Govt. Order and Notification */
-.content {
+.content.unique-content {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -93,7 +93,7 @@ main {
     flex-wrap: wrap;
 }
 
-.content > section {
+.content.unique-content > section {
     flex: 1;
     background: white;
     padding: 20px;
@@ -104,34 +104,34 @@ main {
     box-sizing: border-box;
 }
 
-.content > section:hover {
+.content.unique-content > section:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.content h2 {
+.content.unique-content h2 {
     margin-bottom: 15px;
     font-size: 1.5em;
     color: #005F59;
 }
 
-.content .view-more {
+.content.unique-content .view-more {
     text-align: center;
     margin-top: 10px;
 }
 
-.content .view-more a {
+.content.unique-content .view-more a {
     font-weight: bold;
     color: #005F59;
     text-decoration: none;
 }
 
-.content .view-more a:hover {
+.content.unique-content .view-more a:hover {
     color: #FF9245;
 }
 
 /* Govt. Order and Notification Section (Automatic Scroll) */
-.slider-container {
+.slider-container.unique-slider-container {
     overflow: hidden;
     height: 200px;
     position: relative;
@@ -141,24 +141,24 @@ main {
     padding: 10px;
 }
 
-.slider {
+.slider.unique-slider {
     display: flex;
     flex-direction: column;
     position: absolute;
     animation: scrollNews 15s linear infinite;
 }
 
-.govt-order-list, .notification-list {
+.govt-order-list.unique-govt-order-list, .notification-list.unique-notification-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.govt-order-list li, .notification-list li {
+.govt-order-list.unique-govt-order-list li, .notification-list.unique-notification-list li {
     padding: 8px 0;
 }
 
-.govt-order-list li a, .notification-list li a {
+.govt-order-list.unique-govt-order-list li a, .notification-list.unique-notification-list li a {
     text-decoration: none;
     color: #005F59;
     font-weight: bold;
@@ -166,7 +166,7 @@ main {
     transition: color 0.3s ease-in-out;
 }
 
-.govt-order-list li a:hover, .notification-list li a:hover {
+.govt-order-list.unique-govt-order-list li a:hover, .notification-list.unique-notification-list li a:hover {
     color: #FF9245;
 }
 
@@ -176,23 +176,23 @@ main {
 }
 
 /* View More Styling */
-.view-more {
+.view-more.unique-view-more {
     text-align: center;
     margin-top: 10px;
 }
 
-.view-more a {
+.view-more.unique-view-more a {
     font-weight: bold;
     color: #005F59;
     text-decoration: none;
 }
 
-.view-more a:hover {
+.view-more.unique-view-more a:hover {
     color: #FF9245;
 }
 
 /* Registration Section */
-.registration {
+.registration.unique-registration {
     text-align: center;
     padding: 30px;
     background: linear-gradient(135deg, #f4f4f4, #ffffff);
@@ -203,7 +203,7 @@ main {
 }
 
 /* Registration Header */
-.registration h2 {
+.registration.unique-registration h2 {
     margin-bottom: 15px;
     color: #005F59;
     font-size: 2em;
@@ -211,7 +211,7 @@ main {
 }
 
 /* Form Steps */
-.form-step {
+.form-step.unique-form-step {
     display: none;
     text-align: left;
     background: #ffffff;
@@ -221,20 +221,20 @@ main {
     margin-bottom: 20px;
 }
 
-.form-step.active {
+.form-step.unique-form-step.active {
     display: block;
 }
 
 /* Input Fields */
-.registration form {
+.registration.unique-registration form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
 }
 
-.registration input, 
-.registration select {
+.registration.unique-registration input, 
+.registration.unique-registration select {
     width: 90%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -243,13 +243,13 @@ main {
 }
 
 /* File Upload Inputs */
-.registration input[type="file"] {
+.registration.unique-registration input[type="file"] {
     padding: 8px;
     background: #f9f9f9;
 }
 
 /* Buttons */
-.registration button {
+.registration.unique-registration button {
     background: #FF9245;
     color: white;
     padding: 12px 20px;
@@ -261,41 +261,41 @@ main {
     transition: background 0.3s ease-in-out;
 }
 
-.registration button:hover {
+.registration.unique-registration button:hover {
     background: #e07830;
 }
 
 /* Next & Previous Buttons */
-.next-btn, .prev-btn {
+.next-btn.unique-next-btn, .prev-btn.unique-prev-btn {
     width: 45%;
     font-weight: bold;
 }
 
-.prev-btn {
+.prev-btn.unique-prev-btn {
     background: #005F59;
 }
 
-.prev-btn:hover {
+.prev-btn.unique-prev-btn:hover {
     background: #004844;
 }
 
 /* OTP Button */
-.otp-btn {
+.otp-btn.unique-otp-btn {
     background: #097F78;
 }
 
-.otp-btn:hover {
+.otp-btn.unique-otp-btn:hover {
     background: #005F59;
 }
 
 /* Form Steps Progress */
-.progress-bar {
+.progress-bar.unique-progress-bar {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.progress-bar div {
+.progress-bar.unique-progress-bar div {
     width: 18%;
     text-align: center;
     padding: 10px;
@@ -304,24 +304,24 @@ main {
     font-weight: bold;
 }
 
-.progress-bar .active {
+.progress-bar.unique-progress-bar .active {
     background: #FF9245;
     color: white;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .registration {
+    .registration.unique-registration {
         width: 90%;
     }
 
-    .registration input, .registration select, .registration button {
+    .registration.unique-registration input, .registration.unique-registration select, .registration.unique-registration button {
         width: 100%;
     }
 }
 
 /* Footer Section */
-footer {
+footer.unique-footer {
     background: #005F59;
     color: white;
     padding: 15px;
@@ -333,19 +333,19 @@ footer {
     box-sizing: border-box;
 }
 
-.newsletter, .contact, .social {
+.newsletter.unique-newsletter, .contact.unique-contact, .social.unique-social {
     text-align: center;
     flex: 1;
     min-width: 250px;
     margin-bottom: 10px;
 }
 
-.newsletter h3, .contact h3, .social h3 {
+.newsletter.unique-newsletter h3, .contact.unique-contact h3, .social.unique-social h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
 
-.newsletter input {
+.newsletter.unique-newsletter input {
     padding: 8px;
     width: 180px;
     border: none;
@@ -353,7 +353,7 @@ footer {
     margin-right: 6px;
 }
 
-.newsletter button {
+.newsletter.unique-newsletter button {
     background: #FF9245;
     color: white;
     border: none;
@@ -363,25 +363,25 @@ footer {
     font-size: 0.9em;
 }
 
-.social p {
+.social.unique-social p {
     font-size: 0.9em;
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.social p a {
+.social.unique-social p a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.social p a:hover {
+.social.unique-social p a:hover {
     text-decoration: underline;
 }
 
 /* Steps Section */
-.steps {
+.steps.unique-steps {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -389,7 +389,7 @@ footer {
     background-color: #f4f4f4;
 }
 
-.step {
+.step.unique-step {
     text-align: center;
     background-color: #FF9245;
     padding: 20px;
@@ -402,13 +402,13 @@ footer {
     height: 170px;
 }
 
-.step:hover {
+.step.unique-step:hover {
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     filter: brightness(1.1);
 }
 
-.step .icon {
+.step.unique-step .icon {
     background-color: #fff;
     color: #FF9245;
     width: 80px;
@@ -423,30 +423,30 @@ footer {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.step .icon img {
+.step.unique-step .icon img {
     width: 50px;
     height: 50px;
     object-fit: contain;
 }
 
-.step:hover .icon {
+.step.unique-step:hover .icon {
     background-color: #005F59;
     transform: rotate(360deg);
 }
 
-.step p {
+.step.unique-step p {
     margin-top: 10px;
     font-size: 1.1em;
     color: #333;
     transition: color 0.3s ease;
 }
 
-.step:hover p {
+.step.unique-step:hover p {
     color: #FF9245;
 }
 
 /* New Content Section */
-.content-section {
+.content-section.unique-content-section {
     padding: 15px;
     background-color: white;
     margin: 15px 0;
@@ -456,47 +456,47 @@ footer {
     box-sizing: border-box;
 }
 
-.content-section h2 {
+.content-section.unique-content-section h2 {
     color: #005F59;
     margin-bottom: 10px;
     font-size: 1.5em;
 }
 
-.content-section table {
+.content-section.unique-content-section table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 10px;
 }
 
-.content-section table, .content-section th, .content-section td {
+.content-section.unique-content-section table, .content-section.unique-content-section th, .content-section.unique-content-section td {
     border: 1px solid #ccc;
 }
 
-.content-section th, .content-section td {
+.content-section.unique-content-section th, .content-section.unique-content-section td {
     padding: 8px;
     text-align: left;
 }
 
-.content-section th {
+.content-section.unique-content-section th {
     background-color: #f4f4f4;
 }
 
-.content-section ul {
+.content-section.unique-content-section ul {
     list-style: disc;
     padding-left: 20px;
 }
 
-.content-section ul li {
+.content-section.unique-content-section ul li {
     margin-bottom: 8px;
 }
 
-.content-section p {
+.content-section.unique-content-section p {
     margin-bottom: 10px;
     line-height: 1.5;
 }
 
 /* Flexbox layout for Key Highlights and Important Dates */
-.flex-container {
+.flex-container.unique-flex-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -504,7 +504,7 @@ footer {
     width: 100%;
 }
 
-.flex-container .content-section {
+.flex-container.unique-flex-container .content-section {
     flex: 0 0 48%;
     background: white;
     padding: 20px;
@@ -514,142 +514,142 @@ footer {
     box-sizing: border-box;
 }
 
-.flex-container .content-section:hover {
+.flex-container.unique-flex-container .content-section:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.flex-container .content-section h2 {
+.flex-container.unique-flex-container .content-section h2 {
     margin-bottom: 15px;
     font-size: 1.5em;
     color: #005F59;
 }
 
-.flex-container .content-section table {
+.flex-container.unique-flex-container .content-section table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 10px;
 }
 
-.flex-container .content-section table, .flex-container .content-section th, .flex-container .content-section td {
+.flex-container.unique-flex-container .content-section table, .flex-container.unique-flex-container .content-section th, .flex-container.unique-flex-container .content-section td {
     border: 1px solid #ccc;
 }
 
-.flex-container .content-section th, .flex-container .content-section td {
+.flex-container.unique-flex-container .content-section th, .flex-container.unique-flex-container .content-section td {
     padding: 8px;
     text-align: left;
 }
 
-.flex-container .content-section th {
+.flex-container.unique-flex-container .content-section th {
     background-color: #f4f4f4;
 }
 
 @media (max-width: 768px) {
-    .flex-container .content-section {
+    .flex-container.unique-flex-container .content-section {
         flex: 0 0 100%;
     }
 
-    .content-section {
+    .content-section.unique-content-section {
         padding: 10px;
     }
 
-    .content-section h2 {
+    .content-section.unique-content-section h2 {
         font-size: 1.4em;
     }
 
-    .content-section th, .content-section td {
+    .content-section.unique-content-section th, .content-section.unique-content-section td {
         padding: 6px;
     }
 
-    .content-section p {
+    .content-section.unique-content-section p {
         margin-bottom: 8px;
     }
 
-    footer {
+    footer.unique-footer {
         flex-direction: column;
         align-items: center;
     }
 
-    .newsletter, .contact, .social {
+    .newsletter.unique-newsletter, .contact.unique-contact, .social.unique-social {
         min-width: 100%;
         margin-bottom: 20px;
     }
 
-    .newsletter input {
+    .newsletter.unique-newsletter input {
         width: 100%;
         margin-bottom: 10px;
     }
 
-    .newsletter button {
+    .newsletter.unique-newsletter button {
         width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    header {
+    header.unique-header {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    nav ul {
+    nav.unique-nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    .hero h1 {
+    .hero.unique-hero h1 {
         font-size: 1.8em;
     }
 
-    .hero p {
+    .hero.unique-hero p {
         font-size: 1em;
     }
 
-    .steps {
+    .steps.unique-steps {
         flex-direction: column;
         gap: 10px;
     }
 
-    .step {
+    .step.unique-step {
         width: 100%;
         height: auto;
     }
 
-    .step .icon {
+    .step.unique-step .icon {
         width: 60px;
         height: 60px;
         font-size: 1.5em;
     }
 
-    .step p {
+    .step.unique-step p {
         font-size: 1em;
     }
 
-    .content-section {
+    .content-section.unique-content-section {
         padding: 8px;
     }
 
-    .content-section h2 {
+    .content-section.unique-content-section h2 {
         font-size: 1.2em;
     }
 
-    .content-section th, .content-section td {
+    .content-section.unique-content-section th, .content-section.unique-content-section td {
         padding: 4px;
     }
 
-    .content-section p {
+    .content-section.unique-content-section p {
         margin-bottom: 6px;
     }
 }
 
 /* ...existing code... */
 
-.counselling-steps {
+.counselling-steps.unique-counselling-steps {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.counselling-steps li {
+.counselling-steps.unique-counselling-steps li {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
@@ -659,34 +659,34 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.counselling-steps .step-icon {
+.counselling-steps.unique-counselling-steps .step-icon {
     flex: 0 0 50px;
     margin-right: 15px;
 }
 
-.counselling-steps .step-icon img {
+.counselling-steps.unique-counselling-steps .step-icon img {
     width: 50px;
     height: 50px;
     object-fit: contain;
 }
 
-.counselling-steps .step-content {
+.counselling-steps.unique-counselling-steps .step-content {
     flex: 1;
 }
 
-.counselling-steps .step-content strong {
+.counselling-steps.unique-counselling-steps .step-content strong {
     display: block;
     font-size: 1.2em;
     margin-bottom: 10px;
     color: #005F59;
 }
 
-.counselling-steps .step-content ul {
+.counselling-steps.unique-counselling-steps .step-content ul {
     list-style: disc;
     padding-left: 20px;
 }
 
-.counselling-steps .step-content ul li {
+.counselling-steps.unique-counselling-steps .step-content ul li {
     margin-bottom: 5px;
 }
 
